@@ -16,7 +16,7 @@ steps <- read.csv(unzip("activity.zip"),header = TRUE)
 
 ```
 
-After that, the "date" variable must be converted to POSIX class. In order to do this, de *dplyr* package must be loaded.
+After that, the "date" variable must be converted to POSIX class. In order to do this, de *dplyr* package must be also loaded.
 ```{r, warning = FALSE, message=FALSE}
 library(dplyr)
 steps <- steps %>% mutate(date = strptime(date,"%Y-%m-%d"))
